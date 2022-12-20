@@ -36,10 +36,10 @@ method2();
 
 function method3() {
   const numbers3 = [1, 2, '', undefined]
-  const newNumbers3 = numbers3.filter(number => number >= 1)
+  const newNumbers3 = numbers3.filter(number => number >= 1);
 
   console.log(newNumbers3)
-  return newNumbers3
+  return newNumbers3;
 }
 
 method3();
@@ -51,7 +51,7 @@ function method4() {
   const arrayOfArray = [["c", 2], ["d", 4]]
   const arrayToObject = Object.assign({}, arrayOfArray);
   console.log(arrayToObject)
-  return arrayToObject
+  return arrayToObject;
 }
 
 method4();
@@ -68,6 +68,15 @@ method5([5, 4, 3, 2, 5], 5, 3);
 
 //6) Implemente um método que retorne um array, sem valores duplicados.
 //Entrada do método ([1,2,3,3,2,4,5,4,7,3]), Resultado do método: [1,2,3,4,5,7]
+
+function method6() {
+  const array6 = [1, 2, 3, 3, 2, 4, 5, 4, 7, 3];
+  const arrayFiltered = array6.filter((item, index) => array6.indexOf(item) === index);
+  console.log(arrayFiltered)
+  return arrayFiltered;
+}
+
+method6();
 
 //7) Implemente um método que compare a igualdade de dois arrays e retorne um valor booleano.
 //Entrada do método ([1,2,3,4],[1,2,3,4]), Resultado do método: true
