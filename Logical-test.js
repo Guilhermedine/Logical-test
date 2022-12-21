@@ -81,8 +81,28 @@ method6();
 //7) Implemente um método que compare a igualdade de dois arrays e retorne um valor booleano.
 //Entrada do método ([1,2,3,4],[1,2,3,4]), Resultado do método: true
 
+function method7(array1, array2) {
+  const result7 = array1.length == array2.length && array1.every(function (value, index) {
+    return value === array2[index];
+  })
+
+  console.log(result7);
+  return result7;
+}
+
+method7([1, 2, 3, 4], [1, 2, 3, 4])
+
 //8) Implemente um método que remova os aninhamentos de um array de arrays para um array unico.
 //Entrada do método ([1, 2, [3], [4, 5]]), Resultado do método: [1, 2, 3, 4, 5]
+
+function method8() {
+  const array8 = [1, 2, [3], [4, 5]];
+  const newArray8 = array8.flat();
+  console.log(newArray8);
+  return newArray8;
+}
+
+method8();
 
 //9) Implemente um método divida um array por uma quantidade passada por parâmetro.
 //Entrada do método ([1, 2, 3, 4, 5], 2), Resultado do método: [[1, 2], [3, 4], [5]]
