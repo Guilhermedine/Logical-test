@@ -99,7 +99,7 @@ function method8() {
   const array8 = [1, 2, [3], [4, 5]];
   const newArray8 = [];
 
-  const result8 = array8.map(item => {
+  array8.map(item => {
     if (Array.isArray(item)) {
       return item.map(item => newArray8.push(item));
     }
@@ -126,5 +126,13 @@ method9([1, 2, 3, 4, 5], 2)
 
 //10) Implemente um método que encontre os valores comuns entre dois arrays.
 //Entrada do método ([6, 8], [8, 9]), Resultado do método: [8]
+
+function method10(array1, array2) {
+  const newArray10 = array1.filter(item => array2.includes(item));
+  console.log(newArray10)
+  return newArray10
+}
+
+method10([6, 8], [8, 9])
 
 //ps: Esses exercícios são de senso comum da comunidade desenvolvimento, utilize o melhor padrão para implementação, criando uma semântica factível.
