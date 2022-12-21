@@ -86,7 +86,7 @@ function method7(array1, array2) {
     return value === array2[index];
   })
 
-  console.log(result7);
+  console.log(result7)
   return result7;
 }
 
@@ -97,8 +97,15 @@ method7([1, 2, 3, 4], [1, 2, 3, 4])
 
 function method8() {
   const array8 = [1, 2, [3], [4, 5]];
-  const newArray8 = array8.flat();
-  console.log(newArray8);
+  const newArray8 = [];
+
+  const result8 = array8.map(item => {
+    if (Array.isArray(item)) {
+      return item.map(item => newArray8.push(item));
+    }
+    newArray8.push(item)
+  });
+  console.log(newArray8)
   return newArray8;
 }
 
@@ -106,6 +113,16 @@ method8();
 
 //9) Implemente um método divida um array por uma quantidade passada por parâmetro.
 //Entrada do método ([1, 2, 3, 4, 5], 2), Resultado do método: [[1, 2], [3, 4], [5]]
+
+function method9(array9, number9) {
+  const newArray9 = new Array(Math.ceil(array9.length / number9)).fill().map(
+    item => array9.splice(0, number9)
+  )
+  console.log(newArray9)
+  return newArray9;
+}
+
+method9([1, 2, 3, 4, 5], 2)
 
 //10) Implemente um método que encontre os valores comuns entre dois arrays.
 //Entrada do método ([6, 8], [8, 9]), Resultado do método: [8]
